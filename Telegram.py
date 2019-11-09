@@ -27,7 +27,7 @@ def init_handlers():
 
 def start_listening_activities():
     video = get_last_video()
-    sleep_time = 15
+    sleep_time = 300
 
     six_hours_sleep = 6 * 60 * 60
 
