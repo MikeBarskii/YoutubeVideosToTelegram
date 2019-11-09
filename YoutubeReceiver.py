@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Sample Python code for youtube.activities.list
-# See instructions for running these code samples locally:
-# https://developers.google.com/explorer-help/guides/code_samples#python
-
 import os
 
 import googleapiclient.discovery
@@ -16,7 +10,7 @@ def send_request(channel_id):
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = ""
+    DEVELOPER_KEY = os.environ.get("YOUTUBE_DEVELOPER_KEY")
 
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=DEVELOPER_KEY, cache_discovery=False)

@@ -1,4 +1,5 @@
 import logging
+import os
 import threading
 from time import sleep, time
 
@@ -50,7 +51,7 @@ if __name__ == "__main__":
 
     logger = logging.getLogger(__name__)
 
-    updater = Updater(token='', use_context=True)
+    updater = Updater(token=os.environ.get('TELEGRAM_TOKEN'), use_context=True)
     dispatcher = updater.dispatcher
 
     init_handlers()
